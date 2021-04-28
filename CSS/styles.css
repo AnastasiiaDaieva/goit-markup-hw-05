@@ -27,6 +27,7 @@ html {
   --port-card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   --port-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --standard-duration: 250ms;
 }
 
 body {
@@ -151,7 +152,7 @@ img {
   padding-bottom: 32px;
   text-decoration: none;
   color: var(--add-cl);
-  transition: color 250ms var(--timing-function);
+  transition: color var(--standard-duration) var(--timing-function);
 }
 
 .menu .link {
@@ -190,7 +191,7 @@ img {
   text-decoration: none;
   color: var(--add-cl);
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
 }
 
 /* hovers and accents */
@@ -219,7 +220,7 @@ img {
   height: 4px;
   background-color: var(--accent-cl);
   display: block;
-  bottom: -1.1px;
+  bottom: -1px;
   border-radius: 2px;
 }
 
@@ -233,12 +234,12 @@ img {
   align-items: center;
   margin-right: 10px;
   fill: var(--main-text-cl);
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--standard-duration) var(--timing-function);
 }
 .header-link {
   display: flex;
   align-items: center;
-  transition: color 250ms var(--timing-function);
+  transition: color var(--standard-duration) var(--timing-function);
 }
 
 .header-link:hover .header-icon,
@@ -279,7 +280,7 @@ img {
   display: block;
   text-decoration: none;
   color: var(--wh-cl);
-  transition: color 250ms var(--timing-function);
+  transition: color var(--standard-duration) var(--timing-function);
 }
 
 .phys-address {
@@ -315,7 +316,7 @@ img {
   border-radius: 50%;
   color: var(--wh-cl);
   background-color: var(--footer-icon-bg);
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color var(--standard-duration) var(--timing-function);
 }
 
 .sm-link-footer:hover,
@@ -421,7 +422,7 @@ img {
   height: 100%;
   background-color: var(--home-bg-backdrop);
   opacity: 1;
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity var(--standard-duration) var(--timing-function);
 }
 
 
@@ -431,11 +432,9 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  
   visibility: hidden;
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(0.9);
 }
-
 
 .modal {
   position: absolute;
@@ -449,7 +448,7 @@ img {
   border-radius: 4px; 
   padding-top: 8px;
   padding-right: 8px;
-  transition: scale 250ms var(--timing-function);
+  transition: scale var(--standard-duration) var(--timing-function), visibility var(--standard-duration) var(--timing-function);
   
 }
 
@@ -468,9 +467,6 @@ img {
   width: 18px;
   height: 18px;
 }
-
-
-
 
 
 /* features section home page */
@@ -630,7 +626,7 @@ img {
   width: 20px;
   height: 20px;
   fill: currentColor;
-  transition: color 250ms var(--timing-function);
+  transition: color var(--standard-duration) var(--timing-function);
 }
 
 .sm-link {
@@ -641,7 +637,7 @@ img {
   height: 44px;
   border-radius: 50%;
   color: var(--bord-icon);
-  transition: background-color 250ms var(--timing-function);
+  transition: background-color var(--standard-duration) var(--timing-function);
 }
 
 .sm-link:hover,
@@ -678,7 +674,7 @@ img {
 
 .client-svg {
   fill: currentColor;
-  transition: fill 250ms var(--timing-function);
+  transition: fill var(--standard-duration) var(--timing-function);
 }
 
 .heading-clients {
@@ -699,7 +695,7 @@ img {
   box-sizing: border-box;
   border-radius: 4px;
   padding: 16px 32px;
-  transition: border-color 250ms var(--timing-function);
+  transition: border-color var(--standard-duration) var(--timing-function);
 }
 
 
@@ -732,7 +728,7 @@ img {
   border-radius: 4px;
   padding: 6px 22px;
   border: none;
-  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), border 250ms var(--timing-function);
+  transition: background-color var(--standard-duration) var(--timing-function), color var(--standard-duration) var(--timing-function), box-shadow var(--standard-duration) var(--timing-function), border var(--standard-duration) var(--timing-function);
 }
 
 .portfolio-button:hover,
@@ -797,7 +793,7 @@ img {
 
 .card-link {
   text-decoration: none;
-  transition: box-shadow 250ms var(--timing-function);
+  transition: box-shadow var(--standard-duration) var(--timing-function);
 }
 
 .card-link:hover,
@@ -829,7 +825,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
   transform: translateY(100%);
-  transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
+  transition: opacity var(--standard-duration) var(--timing-function), transform var(--standard-duration) var(--timing-function);
 }
 
 .portfolio-card:hover .port-text {
